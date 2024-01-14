@@ -1,3 +1,4 @@
+using BlogApp.Models.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Data
@@ -7,5 +8,8 @@ namespace BlogApp.Data
         public BlogDbContext(DbContextOptions options) : base(options)
         {
         }
+
+        public DbSet<BlogPost> BlogPosts { get; set; }
+        public DbSet<Tag> Tags { get; set;}
     }
 }
